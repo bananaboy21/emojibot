@@ -21,7 +21,7 @@ async def on_ready():
     print('Bot is online, and ready to ROLL!')
     startup_cogs = ['cogs.utility']
     for cog in startup_cogs:
-	bot.load_extention('cog')
+	bot.load_extention('cog'
 	print(f"Cog {cog.split(".")[1]} has been loaded.")
     while True:
         await bot.change_presence(activity=discord.Game(name=f"with emojis."))
