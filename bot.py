@@ -15,19 +15,26 @@ from contextlib import redirect_stdout
 from discord.ext import commands
 import json
 bot = commands.Bot(command_prefix=commands.when_mentioned_or('e/'),description="TheEmperor™'s Discord bot.\n\nHelp Commands",owner_id=250674147980607488)
+bot._last_result = None
+
 
 @bot.event
 async def on_ready():
     print('Bot is online, and ready to ROLL!')
-    startup_cogs = ['cogs.utility']
-    for cog in startup_cogs:
-	bot.load_extention('cog'
-	print(f"Cog {cog.split(".")[1]} has been loaded.")
     while True:
         await bot.change_presence(activity=discord.Game(name=f"with emojis."))
         await asyncio.sleep(10)
         await bot.change_presence(activity=discord.Game(name=f"on discord."))
         await asyncio.sleep(10)
+
+
+startup_extensions = [
+
+    
+    'cogs.utility'	
+	
+]
+
 
 startTime = time.time()
         
