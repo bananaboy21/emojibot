@@ -27,7 +27,19 @@ async def on_ready():
         await bot.change_presence(activity=discord.Game(name=f"on discord."))
         await asyncio.sleep(10)
 
+bot._last_result = None
 
+startup_extensions = [
+
+    
+    'cogs.utility'	
+	
+]
+
+
+startTime = time.time()
+        
+        
 @bot.command()
 async def ping(ctx):
     """Get the bot's Websocket latency."""
