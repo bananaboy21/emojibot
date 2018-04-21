@@ -22,7 +22,7 @@ bot = commands.Bot(command_prefix=commands.when_mentioned_or('e/'),description="
 async def on_ready():
     print('Bot is online, and ready to ROLL!')
     while True:
-        await bot.change_presence(activity=discord.Game(name=f"with emojis copied from other servers."))
+        await bot.change_presence(activity=discord.Game(name=f"with emojis."))
         await asyncio.sleep(10)
         await bot.change_presence(activity=discord.Game(name=f"on discord."))
         await asyncio.sleep(10)
