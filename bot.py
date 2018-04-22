@@ -16,7 +16,7 @@ from discord.ext import commands
 import json
 bot = commands.Bot(command_prefix=commands.when_mentioned_or('e/'),description="TheEmperor™'s Discord bot.\n\nHelp Commands",owner_id=250674147980607488)
 bot._last_result = None
-
+bot.load_extension('cogs.utility')
 
 @bot.event
 async def on_ready():
@@ -26,14 +26,6 @@ async def on_ready():
         await asyncio.sleep(10)
         await bot.change_presence(activity=discord.Game(name=f"on discord."))
         await asyncio.sleep(10)
-
-
-startup_extensions = [
-
-    
-    'cogs.utility'	
-	
-]
 
 
 startTime = time.time()
